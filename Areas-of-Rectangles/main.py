@@ -1,6 +1,6 @@
 #
-# Name
-# Date
+# Name Tony Dyer
+# Date 2/5/2025
 # Areas of Rectangles Programming Project
 # COSC 1010
 #
