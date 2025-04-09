@@ -22,4 +22,4 @@ def to_pig_latin(sentence): # defining the main function
 # run the program and get input + make it caps
 input_sentence = input("Enter a sentence: ").upper()
 pig_latin = to_pig_latin(input_sentence)
-print("Pig Latin:", pig_latin)
+print("Pig Latin:", pig_latin) #1
