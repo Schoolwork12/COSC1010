@@ -46,5 +46,5 @@ def num_consonants(s):
     #return the consonant count
     return c_count
 
-#call the main function 
+#call the main function 1
 main()
