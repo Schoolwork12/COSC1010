@@ -36,7 +36,7 @@ def num_consonants(s):
     #make a list containing vowels again ;(
     vowels = ['a', 'e', 'i', 'o', 'u']
 
-    #initialize accumulator
+    #initialize accumulator 1
     c_count = 0
 
     #count the sonsonants in s

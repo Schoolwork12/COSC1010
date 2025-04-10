@@ -19,7 +19,7 @@ def to_pig_latin(sentence): # defining the main function
                                                 # because we like yelling!
     return " ".join(pig_latin_words) # join all the single words together
 
-# run the program and get input + make it caps
+# run the program and get input + make it caps 1
 input_sentence = input("Enter a sentence: ").upper()
 pig_latin = to_pig_latin(input_sentence)
 print("Pig Latin:", pig_latin) 
