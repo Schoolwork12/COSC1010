@@ -40,7 +40,7 @@ def encrypt_file(input_file, output_file, codes):
         print(f"An error occurred during encryption: {e}")
 
 
- # start of the encryption program
+ # start of the decryption program
 def decrypt_file(input_file, codes):
 
     # try catch incase something goes wrong
