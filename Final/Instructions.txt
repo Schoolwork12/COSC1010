@@ -11,7 +11,8 @@ this file will serve as a pseudo code and explinations for why I put something i
 
 4. I'm thinking I will have to add a dictionary for what the numbers relate to such as 10: (queen ascii art etc) the thing I might have to do since
     I dont think I can fit the actual art with that code instead perhaps have it relate to a variable that has the ascii art in it, like "queen" --> (ascii)
-    but that is something I will have to look-up --done but also didn't have to
+    but that is something I will have to look-up --done but also didn't have to do it how I thought, I just imported the function that relates to it and 
+        used that
 
 5. then use the random function to draw max two random cards at the start and add an option to "hit me" aka draw another card and if the value exceeds 21 you lose
     if not they can continue, I will also have to add the double down to double the bet theyre placing and draw another card
@@ -23,12 +24,15 @@ this file will serve as a pseudo code and explinations for why I put something i
 
 7. I will have to put a limit on what they draw such as if its a 16 or greater then they dont draw, then of course if they get over 21 they bust and you win 2x --done
 
-8. additionally adding a natural bonus would be a plus say 2.5x or something if you draw a 21 --didnt add since I dont want to give the player more money hehe
+8. additionally adding a natural bonus would be a plus say 2.5x or something if you draw a natural 21 --didnt add since I dont want to give the player more money hehe
 
 9. ace's might be a bit to figure out due to it being either a 1 or 11 but I could put something that if player has an ace then if they go over 21 once then it does a 
     minus 10 to the amount you have --done they were easier than I thought to add
 
 10. added a section that if you lose all your money the dealer berates you (as usual) and the game closes otherwise you can play another game
+
+11. Might add a imported function that picks a random dealer line in some sections just to spice things up, might have to add another file
+    just so things dont get messy in the main program file, shouldnt be hard to implement, just an import function and run that though a .random and it should do 
 
 ___________________________
 KNOWN BUGS TO POSSIBLY FIX |
