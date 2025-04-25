@@ -27,7 +27,9 @@ this file will serve as a pseudo code and explinations for why I put something i
 
 9. ace's might be a bit to figure out due to it being either a 1 or 11 but I could put something that if player has an ace then if they go over 21 once then it does a 
     minus 10 to the amount you have --done they were easier than I thought to add
+
 10. added a section that if you lose all your money the dealer berates you (as usual) and the game closes otherwise you can play another game
+
 ___________________________
 KNOWN BUGS TO POSSIBLY FIX |
 ___________________________|

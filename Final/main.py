@@ -179,7 +179,7 @@ def main_pro(): # main function
 
         if money == 0: # if you completely lose all your money it quits the game
             print(splash)
-            print("Dealer: You're outta cash! I cant wait to see you pan-handling outside.")
+            print("Dealer: You're outta cash! I can't wait to see you pan-handling outside.")
             clear_sc()
             break
         else:
