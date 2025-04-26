@@ -20,7 +20,7 @@ this file will serve as a pseudo code and explinations for why I put something i
 
 6. I will have to figure out how to hide the second card maybe I could instead have them draw one card face up, and instead of the second it auto does the card back ascii
     art, then when its their turn to draw it auto does a .random draw of a card + till they get to a certain number --done the back card is backwards(it should be
-    on the right) but oh well
+    on the right) but oh well --- fixed
 
 7. I will have to put a limit on what they draw such as if its a 16 or greater then they dont draw, then of course if they get over 21 they bust and you win 2x --done
 

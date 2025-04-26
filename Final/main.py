@@ -58,8 +58,8 @@ def display_hand(hand, owner="Player", hidden=False):  # displays the cards, dea
     lines = [""] * 5  # each card has 6 lines of ASCII art
 
     if hidden:
-        first_card = card_ascii['back'].splitlines()
-        second_card = card_ascii[hand[1]].splitlines()
+        first_card = card_ascii[hand[1]].splitlines()
+        second_card = card_ascii['back'].splitlines() # this makes it so the dealers one card is hidden like in regular blackjack
         for i in range(5):
             lines[i] = first_card[i] + " " + second_card[i]
         print(f"{owner}'s hand:")
