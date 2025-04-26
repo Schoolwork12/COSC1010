@@ -15,8 +15,14 @@ import time
 # import the ascii art file for the cards/splash screen
 from card_art import card_ascii , splash
 
+#Import some dealer lines to make fun of the player
+from dealer_lines import dealer_win, dealer_loss, dealer_tie, dealer_allin, dealer_slander, dealer_altwin, dealer_leave
+
+def get_dealerline(dealer_lines): # this will reandomize the dealer lines so it doesnt just repeat the same one
+    return random.choice(dealer_lines)
+
 def clear_sc():  #this is the time and clear screen function so that the game stays pretty
-    time.sleep(3.5)
+    time.sleep(3.7) # was 3.5
     os.system('cls' if os.name == 'nt' else 'clear')
 
 def create_deck(): # create the deck and shuffle it 
@@ -49,7 +55,7 @@ def calculate_hand_value(hand):  # calculating the hand value for the letter car
     return value
 
 def display_hand(hand, owner="Player", hidden=False):  # displays the cards, dealers one card is hidden
-    lines = [""] * 6  # each card has 6 lines of ASCII art
+    lines = [""] * 5  # each card has 6 lines of ASCII art
 
     if hidden:
         first_card = card_ascii['back'].splitlines()
@@ -58,8 +64,8 @@ def display_hand(hand, owner="Player", hidden=False):  # displays the cards, dea
             lines[i] = first_card[i] + " " + second_card[i]
         print(f"{owner}'s hand:")
     else:
-        card_lines = [card_ascii[card].splitlines() for card in hand]
-        for i in range(5):
+        card_lines = [card_ascii[card].splitlines() for card in hand] # this is just to make sure the ascii art displays correctly 
+        for i in range(5):                                          # such as the cards being right next to eachother rather than above or below
             lines[i] = " ".join(card[i] for card in card_lines)
         print(f"{owner}'s hand (value: {calculate_hand_value(hand)}):")
 
@@ -108,15 +114,15 @@ def evaluate_game(player_hand, dealer_hand, bet, money): # will calc the hands a
     dealer_value = calculate_hand_value(dealer_hand)
 
     if player_value > 21:
-        print("Dealer: Told you you'd lose.")
+        print(get_dealerline(dealer_win))
     elif dealer_value > 21 or player_value > dealer_value:
-        print("Dealer: Ugh, fine. You win this one...")
+        print(get_dealerline(dealer_loss))
         money += bet * 2
     elif player_value == dealer_value:
-        print("Dealer: A tie? Lucky punk. Here's your money back.")
+        print(get_dealerline(dealer_tie))
         money += bet
     else:
-        print("Dealer: Ha! Pay up!")
+        print(get_dealerline(dealer_win))
 
     clear_sc()
     return money
@@ -134,7 +140,7 @@ def place_bet(money):  #place bet function, just gets the amount of money you cu
                 print("Dealer: You can't bet nothing loser, this is a game of risk. Try again.")
                 clear_sc()
             elif bet == money:
-                print("Dealer: All in!? I can't wait to see you pan-handling on my way into work...")
+                print(get_dealerline(dealer_allin))
                 clear_sc()
                 return bet, 0
             else:
@@ -143,7 +149,7 @@ def place_bet(money):  #place bet function, just gets the amount of money you cu
                 clear_sc()
                 return bet, money
         except ValueError: # just incase the player gets cheeky
-            print("Dealer: Numbers only moron!")
+            print(get_dealerline(dealer_slander))
             clear_sc()
 
 def main_pro(): # main function
@@ -153,7 +159,7 @@ def main_pro(): # main function
             money = int(input("How much money would you like to gamble with? $"))
             break
         except ValueError: # incase the player decides to get cheeky
-            print("Dealer: That's not even a number... come back when you know how money works.")
+            print(get_dealerline(dealer_slander))
             clear_sc()
 
     if money <= 1000:
@@ -179,17 +185,22 @@ def main_pro(): # main function
 
         if money == 0: # if you completely lose all your money it quits the game
             print(splash)
-            print("Dealer: You're outta cash! I can't wait to see you pan-handling outside.")
+            print(get_dealerline(dealer_altwin)) # for when you lose all your money
             clear_sc()
             break
         else:
-            print(splash) # if you still have money it'll ask if you want to play another
-            cont = input("Would you like to play another hand? (y/n): ").lower()
-            clear_sc()
-            if cont != 'y': #if you want to quit playing after a hand 
+            while True: # if you still have money you can play again
                 print(splash)
-                print("Dealer: Alright, scram while you're ahead.")
+                cont = input("Would you like to play another hand? (y/n): ").lower()
+                if cont in ['y', 'n']:
+                    clear_sc()
+                    break
+                else:
+                    print(get_dealerline(dealer_slander)) # in case you dont put y or n the dealer will insult you
+                    clear_sc()
+            if cont != 'y':
+                print(splash)
+                print(get_dealerline(dealer_leave))
                 clear_sc()
                 break
-
 main_pro()

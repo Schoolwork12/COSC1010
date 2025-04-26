@@ -34,6 +34,8 @@ this file will serve as a pseudo code and explinations for why I put something i
 11. Might add a imported function that picks a random dealer line in some sections just to spice things up, might have to add another file
     just so things dont get messy in the main program file, shouldnt be hard to implement, just an import function and run that though a .random and it should do 
 
+    ^^^ this is done and implemented
+
 ___________________________
 KNOWN BUGS TO POSSIBLY FIX |
 ___________________________|
@@ -44,6 +46,6 @@ his hand anymore but only yours, otherwise it works fine and will continue to pl
 in another function, I could get rid of the clear_sc() function but I have a feeling this would mess up the program more, such as getting a duplicate on the screen
 and make it look ugly
 
-Bug 2.
+Bug 2. --- fixed
 if you input a random word or letter/number in the would you like to play again section (intakes only y or n) it will default to you leaving, I might add a section
 that makes the dealer berate you again and then asks the y or n question again
