@@ -196,7 +196,7 @@ def main_pro(): # main function
                     clear_sc()
                     break
                 else:
-                    print(get_dealerline(dealer_slander)) # in case you dont put y or n the dealer will insult you
+                    print(get_dealerline(dealer_slander)) # in case you dont put y or n the dealer will insult you 
                     clear_sc()
             if cont != 'y':
                 print(splash)

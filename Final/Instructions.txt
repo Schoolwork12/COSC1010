@@ -40,7 +40,7 @@ ___________________________
 KNOWN BUGS TO POSSIBLY FIX |
 ___________________________|
 
-Bug 1.
+Bug 1. --- will keep in game currently
 if you mess up the input in the hit/stand/ or double down section it will correctly berate the player, but then the dealers hand is cleared so you cant see 
 his hand anymore but only yours, otherwise it works fine and will continue to play correctly. This might take some time to fix since the dealers hand is
 in another function, I could get rid of the clear_sc() function but I have a feeling this would mess up the program more, such as getting a duplicate on the screen
